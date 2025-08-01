@@ -1,4 +1,4 @@
-# 
+#
 <p align="center">
   <h1 align="center"> <ins>RoMa</ins> 🏛️:<br> Robust Dense Feature Matching <br> ⭐CVPR 2024⭐</h1>
   <p align="center">
@@ -13,7 +13,7 @@
     <a href="https://scholar.google.com/citations?user=lkWfR08AAAAJ">Michael Felsberg</a>
   </p>
   <h2 align="center"><p>
-    <a href="https://arxiv.org/abs/2305.15404" align="center">Paper</a> | 
+    <a href="https://arxiv.org/abs/2305.15404" align="center">Paper</a> |
     <a href="https://parskatt.github.io/RoMa" align="center">Project Page</a>
   </p></h2>
   <div align="center"></div>
@@ -30,6 +30,21 @@ In your python environment (tested on Linux python 3.10), run:
 ```bash
 pip install -e .
 ```
+
+### uv
+
+```bash
+$ uv python install 3.10
+
+$ uv python pin 3.10
+$ uv venv --python 3.10
+$ source .venv/bin/activate
+$ uv init
+$ uv pip install -e .
+$ uv pip install -r requirements.txt
+$ uv lock
+```
+
 ## Demo / How to Use
 We provide two demos in the [demos folder](demo).
 Here's the gist of it:
@@ -53,7 +68,7 @@ F, mask = cv2.findFundamentalMat(
 ## Settings
 
 ### Resolution
-By default RoMa uses an initial resolution of (560,560) which is then upsampled to (864,864). 
+By default RoMa uses an initial resolution of (560,560) which is then upsampled to (864,864).
 You can change this at construction (see roma_outdoor kwargs).
 You can also change this later, by changing the roma_model.w_resized, roma_model.h_resized, and roma_model.upsample_res.
 
